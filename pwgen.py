@@ -49,7 +49,3 @@ elif pw_length != 0:
   else:
     print("You have to enter 'y' or 'n'." )
     quit()
-
-else:
-  print("You have to enter a number.")
-  quit()
