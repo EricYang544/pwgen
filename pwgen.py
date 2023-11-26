@@ -1,4 +1,9 @@
 import random
+import subprocess
+
+def copy2clip(txt):
+    cmd='echo '+txt.strip()+'|clip'
+    return subprocess.check_call(cmd, shell=True)
 
 numbers = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0']
 symbols = ['!', '#', '$', '%', '&', '(', ')', '*', '+']
@@ -26,7 +31,13 @@ if pw_length == 0:
 
   else:
     print("You have to enter 'y' or 'n'." )
-    quit()
+
+copy2clip(password)
+print("The password is copied to the clipboard.")
+
+the_end = input("If you want to end this program, press enter.")
+if the_end == "":
+  quit()
 
 elif pw_length != 0:
   if using_symbols == 'n':
@@ -48,4 +59,10 @@ elif pw_length != 0:
 
   else:
     print("You have to enter 'y' or 'n'." )
-    quit()
+
+copy2clip(password)
+print("The password is copied to the clipboard.")
+
+the_end = input("If you want to end this program, press enter.")
+if the_end == "":
+  quit()
