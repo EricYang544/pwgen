@@ -5,6 +5,15 @@ def copy2clip(txt):
     cmd='echo '+txt.strip()+'|clip'
     return subprocess.check_call(cmd, shell=True)
 
+def myFunc1():
+    print("You have to enter 'y' or 'n'." )
+
+def myFunc2():
+    copy2clip(password)
+    print("The password is copied to the clipboard.")
+
+    the_end = input("If you want to end this program, press enter.")
+
 numbers = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0']
 symbols = ['!', '#', '$', '%', '&', '(', ')', '*', '+']
 
@@ -30,12 +39,9 @@ if pw_length == 0:
         print(f"Your password is '{password}'")
 
     else:
-        print("You have to enter 'y' or 'n'." )
+        myFunc1()
 
-    copy2clip(password)
-    print("The password is copied to the clipboard.")
-
-    the_end = input("If you want to end this program, press enter.")
+    myFunc2()
 
 if pw_length != 0:
     if using_symbols == 'n':
@@ -56,9 +62,6 @@ if pw_length != 0:
         print(f"Your password is '{password}'")
 
     else:
-        print("You have to enter 'y' or 'n'." )
+        myFunc1()
 
-    copy2clip(password)
-    print("The password is copied to the clipboard.")
-
-    the_end = input("If you want to end this program, press enter.")
+    myFunc2()
